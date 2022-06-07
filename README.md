@@ -5,11 +5,15 @@ Laravel-PDF generator using template(Fpdi library used)
 Using [FPDF](http://fpdf.org/). made easy with Laravel. See FPDF homepage for more information about the usage.
 
 ## Installation using Composer
-` composer require codedge/laravel-fpdf `
+```
+composer require codedge/laravel-fpdf 
+```
 
 ## Configuration
 Run
-`php artisan vendor:publish --provider="Codedge\Fpdf\FpdfServiceProvider" --tag=config`
+```
+php artisan vendor:publish --provider="Codedge\Fpdf\FpdfServiceProvider" --tag=config
+```
 to publish the configuration file to `config/fpdf.php`.
 
 ## Usage
@@ -28,5 +32,6 @@ Route::get('/', function (Codedge\Fpdf\Fpdf\Fpdf $fpdf) {
 
 ## Use in Laravel Vapor
 If you want to use [Laravel Vapor](https://vapor.laravel.com/) to host your application, [a special header](https://docs.vapor.build/1.0/projects/development.html#binary-responses) needs to be attached to each response that FPDF returns to your browser. To enable the use of this header, add the following environment variable to the Vapor environment file:
-
-`FPDF_VAPOR_HEADERS=true`
+```
+FPDF_VAPOR_HEADERS=true
+```
